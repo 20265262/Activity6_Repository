@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastWheel- Transportation App</title>
+</head>
+<body id="top">
+    <header>
+        <h1>FastWheel</h1>
+        <img src="logo.png" alt="FastWheel Logo" width="300" height="300">
+        <p><em>Your ride, your route, your time.</em></p>
+        <nav>
+            <a href="#book">Book a Ride</a> | 
+            <a href="#fleet">Our Vehicles</a> | 
+            <a href="#map">Map</a> | 
+            <a href="#media">Media</a> | 
+            <a href="#schedule">Schedule</a> | 
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    </hr>
+
+    <main>
+        <hr>
+        <section id="book">
+            <h2>Book a Ride</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Trip Details</legend>
+                    <p>
+                        <label for="Full name">Full name</label>
+                        <input type="text" id="Full name" name="Full name" required placeholder="Enter your full name">
+                    </p>
+                    <p>
+                        <label for="Phone number">Phone number</label>
+                        <input type="tel" id="Phone number" name="Phone number" required placeholder="Enter your phone number">
+                    </p>
+                    <p>
+                        <label for="Email">Email</label>
+                        <input type="email" id="Email" name="Email" required placeholder="Enter your email address">
+                    </p>
+                    <p>
+                        <label for="Pick-up and Drop-off location">Pick-up and Drop-off location:</label>
+                        <input type="text" id="Pick-up and Drop-off location" name="Pick-up and Drop-off location" list="places" required placeholder="Enter your pick-up and drop-off locations">
+                    <datalist id="places">
+                        <option value="Central Terminal"></option>
+                        <option value="City Hall"></option>
+                        <option value="Airport"></option>
+                        <option value="University Campus"></option>
+                        <option value="Public Market"></option>
+                    </datalist>
+                    <p>
+                        <label for="Date">Date:</label>
+                        <input type="date" id="Date" name="Date" required>
+                        <label for="Time">Time:</label>
+                        <input type="time" id="Time" name="Time" required>
+                    </p>
+                    <p>
+                        <label for="passengers">Passengers:</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+                    </p>
+                    <p>
+                        <label for="Vehicle">Vehicle:</label>
+                        <select id="Vehicle" name="Vehicle" required>
+                            <option value="">Select a vehicle</option>
+                            <option value="Taxi">Taxi</option>
+                            <option value="Van">Van</option>
+                            <option value="Motorcycle Taxi">Motorcycle Taxi</option>
+                            <option value="Tricycle">Tricycle</option>
+                        </select>
+                    </p>
+                        <legend>Payment method:</legend>
+                        <p>
+                            <input type="radio" id="payment-cash" name="payment-method" value="cash" checked>
+                            <label for="payment-cash">Cash</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="payment-card" name="payment-method" value="card">
+                            <label for="payment-card">Card</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="payment-ewallet" name="payment-method" value="e-wallet">
+                            <label for="payment-ewallet">E-Wallet</label>
+                        </p>
+                        <legend>Extras</legend>
+                        <p>
+                            <input type="checkbox" id="extra-luggage" name="extras" value="extra-luggage">
+                            <label for="extra-luggage">Extra luggage</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="child-seat" name="extras" value="child-seat">
+                            <label for="child-seat">Child seat</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="wheelchair-accessible" name="extras" value="wheelchair-accessible">
+                            <label for="wheelchair-accessible">Wheelchair accessible</label>
+                        </p>
+                    <p>
+                        <label for="driver-notes">Notes for the driver:</label>
+                        <textarea id="driver-notes" name="driver-notes" rows="4" cols="50" placeholder="Add any notes for your driver"></textarea>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">terms and conditions</a>.</label>
+                    </p>
+                    <p>
+                        <button type="submit">Book Now</button>
+                        <button type="reset">Clear</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+        <hr>
+        <section id="fleet">
+            <h2>Our Vehicles</h2>
+            <p>Choose a vehicle that fits your trip and the number of passengers:</p>
+            <figure>
+                <img alt="Our awesome taxi" src="taxi.png" alt="Taxi" width="800" height="533">
+                <figcaption><strong>Taxi</strong> - Comfortable and convenient for solo travelers or small groups.</figcaption> 
+            </figure>
+                <small>taxi</small>
+                <hr>
+            <figure>
+                <img alt="Our comfortable van" src="van.png" alt="van" width="800" height="533">
+                <figcaption><strong>Van</strong> - Spacious seating and luggage room for families or larger groups.</figcaption>
+            </figure>
+                <small>van</small>
+                <hr>
+            <figure>
+                <img alt="Our shuttle bus" src="bus.png" alt="Shuttle bus" width="800" height="533">
+                <figcaption><strong>Shuttle Bus</strong> - A practical option for comfortable shared trips.</figcaption>
+            </figure>
+                <small>bus</small>
+                <hr>
+        </section>
+
+        <section id="map">
+            <h2>Find Our Stops</h2>
+            <p>Use the map to explore the Baguio City area and plan where to begin your trip.</p>
+            <iframe
+                title="OpenStreetMap map of Baguio City"
+                width="600"
+                height="400"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=120.5700%2C16.3900%2C120.6100%2C16.4300&amp;layer=mapnik&amp;marker=16.4023%2C120.5960">
+            </iframe>
+            <p>
+                <a href="https://www.openstreetmap.org/?mlat=16.4023&amp;mlon=120.5960#map=15/16.4023/120.5960" target="_blank" rel="noopener">View larger map</a>
+            </p>
+
+            <h3>Image Map: Route Overview</h3>
+            <p>Choose one of the marked stops in this route overview to jump to the shuttle schedule.</p>
+            <img src="https://placehold.co/600x250?text=Terminal+%7C+City+Hall+%7C+Airport" alt="Route overview" width="600" height="250" usemap="#routemap">
+
+            <map name="routemap">
+                <area shape="rect" coords="0,0,199,249" href="#schedule" alt="Central Terminal stop and schedule">
+                <area shape="rect" coords="200,0,399,249" href="#schedule" alt="City Hall stop and schedule">
+                <area shape="rect" coords="400,0,599,249" href="#schedule" alt="Airport stop and schedule">
+            </map>
+            <hr>
+        </section>
+        
+        <section id="media">
+            <h2>Media</h2>
+            <h3>How FastWheel Works (Video)</h3>
+            <video width="480" controls poster="https://cdn.pixabay.com/video/2016/02/14/2165-155327596_tiny.jpg">
+                <source src="drive.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Driver Announcement (Audio)</h3>
+            <audio controls>
+                    <source src="desti.ogg" type="audio/ogg">
+                    <source src="desti.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+                <p><small>Sample: <a href="https://commons.wikimedia.org/wiki/File:MT-Kariya-announce.ogg" target="_blank" rel="noopener"></a>.</small></p>
+            <h3>Watch on YouTube (Embedded)</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K6xsEng2PhU?si=pHnoPwCtMqBnAwDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <hr>
+        <section id="schedule">
+            <h2>Schedule</h2>
+            <p>Check our operating hours and service schedule:</p>
+            <table border="1" cellpadding="6" cellspacing="0">
+                <caption>Daily departures from Central Terminal</caption>
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Fare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Terminal to City Hall</td>
+                        <td>8:00 AM</td>
+                        <td>8:20 AM</td>
+                        <td>₱50</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal to University</td>
+                        <td>8:30 AM</td>
+                        <td>8:55 AM</td>
+                        <td>₱60</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal to Airport</td>
+                        <td>9:00 AM</td>
+                        <td>9:40 AM</td>
+                        <td>₱60</td>
+                    </tr>
+                    <tr>
+                        <td>Terminal to Public Market</td>
+                        <td>9:30 AM</td>
+                        <td>9:50 AM</td>
+                        <td>₱40</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Check Your Route</h3>
+            <method="get" action="#">
+                <label for="route-select">Select a route:</label>
+                <select id="route-select" name="route">
+                    <option value="">--Please choose a route--</option>
+                    <option value="terminal-cityhall">Terminal to City Hall</option>
+                    <option value="terminal-university">Terminal to University</option>
+                    <option value="terminal-airport">Terminal to Airport</option>
+                    <option value="terminal-market">Terminal to Public Market</option>
+                </select>
+            </method>
+        </section>
+        <hr>
+        <section id="contact">
+            <h2>Contact & Feedback</h2>
+            <form enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Send Feedback</legend>
+                    <p>
+                        <label for="feedback-name">Your name:</label>
+                        <input type="text" id="feedback-name" name="feedback-name" required>
+                    </p>
+                    <p>
+                        <label for="ride-rating">Rate your ride (1-5):</label>
+                        <input type="range" id="ride-rating" name="ride-rating" min="1" max="5" value="5">
+                    </p>
+                    <p>
+                        <label for="feedback-topic">Topic:</label>
+                        <select id="feedback-topic" name="feedback-topic">
+                            <option value="compliment">Compliment</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="lost-item">Lost item</option>
+                            <option value="suggestion">Suggestion</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="feedback-message">Message:</label>
+                        <textarea id="feedback-message" name="feedback-message" rows="5" cols="40" required></textarea>
+                    </p>
+                    <p>
+                        <label for="feedback-photo">Attach a photo (optional):</label>
+                        <input type="file" id="feedback-photo" name="feedback-photo" accept="image/*">
+                    </p>
+                    <p>
+                        <button type="submit">Send Feedback</button>
+                    </p>
+                </fieldset>
+            </form>
+            <h3>Reach Us</h3>
+            <address>
+                <strong>FastWheel Transportation</strong><br>
+                University of Baguio, Baguio City<br>
+                Phone: <a href="tel:+631234567890">+631234567890</a><br>
+                Email: <a href="mailto:20265262@s.ubaguio.edu">20265262@s.ubaguio.edu</a>
+            </address>
+        </section>
+        <hr>
+        <section id="links">
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a></li>
+                <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></li>
+                <li><a href="https://www.instagram.com/euripped/" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="#top">Back to top</a></li>
+            </ul>
+        </section>
+        <section id="terms-info">
+            <h2>Terms &amp; Conditions</h2>
+            <details>
+                <summary><strong>Read the terms</strong></summary>
+                <ol>
+                    <li>Passengers should provide accurate trip details, including pick-up location, destination, date, and time.</li>
+                    <li>Passengers should arrive at the selected pick-up point on time and follow the driver's safety instructions.</li>
+                    <li>Passengers should take their personal belongings with them and report lost items through the feedback form.</li>
+                </ol>
+            </details>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <p>© 2026 Euri P. Dancel. All rights reserved.</p>
+    </footer>
+</body>
+</html>
